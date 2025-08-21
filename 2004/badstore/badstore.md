@@ -115,10 +115,42 @@ Nmap done: 1 IP address (1 host up) scanned in 13.82 seconds
 
 ---
 
-*Markdown notes:*
+## Web Enumeration
 
-* Use triple backticks for commands and code blocks.
-* Use `**bold**` for important elements like ports and services.
-* Use bullets for observations and notes.
-* Separate steps with `---` for readability.
+**Goal:** Explore the web server to find interesting files, directories, and points that could be exploited.
+
+### Step 1: Open the website
+
+* Open browser and navigate to `http://192.168.56.102` (or HTTPS if needed).
+* Observe the homepage: forms, login pages, search boxes, anything visible.
+* **Tip:** Take a screenshot of the homepage to show what it looks like.
+
+### Step 2: Check `robots.txt`
+
+* URL: `http://192.168.56.102/robots.txt`
+* Contents:
+
+```
+User-agent: *
+Disallow: /cgi-bin
+Disallow: /scanbot
+Disallow: /backup
+Disallow: /supplier
+Disallow: /upload
+```
+
+* **Explanation:** Directories listed here are not secret but may contain files or scripts worth checking manually.
+* **Tip:** Take a screenshot of `robots.txt` for reference.
+
+### Step 3: Document findings
+
+* Note any forms, login pages, or directories found.
+* Take screenshots if helpful.
+* Record the URLs and what they appear to contain in your markdown.
+
+**Next Step:**
+
+* Begin checking each disallowed directory manually to see if it contains anything interesting, e.g., `/backup` or `/upload`. Document what you find step by step.
+
+
 
