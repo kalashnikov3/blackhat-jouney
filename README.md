@@ -23,4 +23,4 @@ This repository documents my personal pentesting lab, where I practice on VulnHu
 
 - Lab is **isolated** and **for learning only**.  
 - Do not test outside this environment.
-- All the walkthroughs can be be found in the `vulnlab` directory in chronological order :)
+- All the walkthroughs can be be found in the [vulnhub](vulnhub) directory in chronological order :)
