@@ -2,4 +2,4 @@
 
 ---
 
-
+![BadStore VM Setup](screenshots/badstore1.png)
